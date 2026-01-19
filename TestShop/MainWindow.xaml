@@ -25,5 +25,19 @@
         <Button Name="AddProductBtn" Content="Добавить товар" Click="AddProductBtn_Click"/>
         <Button Name="EditProductBtn" Grid.Column="2" Content="Изменить товар" Click="EditProductBtn_Click"/>
         <Button Name="RemoveProductBtn" Grid.Column="4" Content="Удалить товар" Click="RemoveProductBtn_Click"/>
+
+        <ListView Name="ProductsLv" Grid.Row="2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Изображение" DisplayMemberBinding="{Binding Photo}"/>
+                    <GridViewColumn Header="Название товара" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding IdCategory}"/>
+                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Header="Дата выпуска" DisplayMemberBinding="{Binding ReleaseDate}"/>
+                    <GridViewColumn Header="Наличие на складе" DisplayMemberBinding="{Binding IsAvailable}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
