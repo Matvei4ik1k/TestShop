@@ -11,7 +11,7 @@ namespace TestShop.Model
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Product
     {
         public int Id { get; set; }
@@ -21,8 +21,15 @@ namespace TestShop.Model
         public string Description { get; set; }
         public Nullable<System.DateTime> ReleaseDate { get; set; }
         public Nullable<bool> IsAvailable { get; set; }
-        public string Photo { get; set; }
-    
+        public string IsAvaiableText
+        {
+            get
+            {
+                return IsAvailable ? "Да" : "Нет";
+            }
+        }
+       public string Photo { get; set; }
+
         public virtual Category Category { get; set; }
     }
 }
