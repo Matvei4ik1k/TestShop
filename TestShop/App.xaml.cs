@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TestShop.Model;
 
 namespace TestShop
 {
@@ -13,5 +14,6 @@ namespace TestShop
     /// </summary>
     public partial class App : Application
     {
+        public static Entities context = new Entities();
     }
 }

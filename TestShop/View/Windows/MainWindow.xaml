@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
+        Title="MainWindow" Height="900" Width="1600" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -32,7 +32,7 @@
                     <GridViewColumn Header="Изображение" DisplayMemberBinding="{Binding Photo}"/>
                     <GridViewColumn Header="Название товара" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}"/>
-                    <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding IdCategory}"/>
+                    <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}"/>
                     <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}"/>
                     <GridViewColumn Header="Дата выпуска" DisplayMemberBinding="{Binding ReleaseDate}"/>
                     <GridViewColumn Header="Наличие на складе" DisplayMemberBinding="{Binding IsAvailable}"/>
