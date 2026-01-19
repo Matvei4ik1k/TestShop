@@ -26,15 +26,15 @@
         <Button Name="EditProductBtn" Grid.Column="2" Content="Изменить товар" Click="EditProductBtn_Click"/>
         <Button Name="RemoveProductBtn" Grid.Column="4" Content="Удалить товар" Click="RemoveProductBtn_Click"/>
 
-        <ListView Name="ProductsLv" Grid.Row="2">
+        <ListView Name="ProductsLv" Grid.ColumnSpan="5" Grid.Row="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Изображение" DisplayMemberBinding="{Binding Photo}"/>
                     <GridViewColumn Header="Название товара" DisplayMemberBinding="{Binding Name}"/>
-                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0:C0}, ConverterCulture=ru-RU}"/>
                     <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}"/>
                     <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}"/>
-                    <GridViewColumn Header="Дата выпуска" DisplayMemberBinding="{Binding ReleaseDate}"/>
+                    <GridViewColumn Header="Дата выпуска" DisplayMemberBinding="{Binding ReleaseDate, StringFormat=dd.MM.yyyy}"/>
                     <GridViewColumn Header="Наличие на складе" DisplayMemberBinding="{Binding IsAvailable}"/>
                 </GridView>
             </ListView.View>
