@@ -29,7 +29,15 @@
         <ListView Name="ProductsLv" Grid.ColumnSpan="5" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Изображение" DisplayMemberBinding="{Binding Photo}"/>
+
+                    <GridViewColumn Header="Изображение" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Photo, FallbackValue=C:/Users/vboxuser/source/repos/34/TestShop/TestShop/Image/....jpg}" Width="100" Height="100"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                   
                     <GridViewColumn Header="Название товара" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price, StringFormat={}{0:C0}, ConverterCulture=ru-RU}"/>
                     <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category.Name}"/>

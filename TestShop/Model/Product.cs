@@ -20,7 +20,7 @@ namespace TestShop.Model
         public Nullable<int> IdCategory { get; set; }
         public string Description { get; set; }
         public Nullable<System.DateTime> ReleaseDate { get; set; }
-        public Nullable<bool> IsAvailable { get; set; }
+        public bool IsAvailable { get; set; }
         public string IsAvaiableText
         {
             get

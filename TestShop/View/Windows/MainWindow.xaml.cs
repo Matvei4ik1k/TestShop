@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestShop.View.Windows;
 
 namespace TestShop
 {
@@ -29,12 +30,15 @@ namespace TestShop
 
         private void AddProductBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddProduct addproduct = new AddProduct();
+            
+             addproduct
+            this.Close();
         }
 
         private void EditProductBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void RemoveProductBtn_Click(object sender, RoutedEventArgs e)
